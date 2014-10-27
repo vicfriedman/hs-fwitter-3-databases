@@ -42,6 +42,11 @@ class ApplicationController < Sinatra::Application
     redirect '/users'
   end
 
+  get '/sign-in' do
+    @users = User.all
+    erb :signin
+  end
+  
   post '/sign-in' do
     session[:id] = params[:user]
     @user = User.find(params[:user])

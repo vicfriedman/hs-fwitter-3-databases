@@ -31,6 +31,12 @@ class ApplicationController < Sinatra::Application
     erb :users
   end
 
+  get '/users/:id' do
+    @user = User.find(params[:id])
+    @tweets = @user.tweets
+    erb :user
+  end
+
   post '/users' do
     User.create(:name => params[:username])
     redirect '/users'
@@ -38,7 +44,8 @@ class ApplicationController < Sinatra::Application
 
   post '/sign-in' do
     session[:id] = params[:user]
-    redirect '/tweets'
+    @user = User.find(params[:user])
+    redirect "/users/#{@user.id}"
   end
 
   get '/sign-out' do

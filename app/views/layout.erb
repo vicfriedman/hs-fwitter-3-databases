@@ -7,15 +7,8 @@
     <div class="container">
       <h1>Welcome to Fwitter!</h1>
 
-      <% if signed_in? %>
-        <p><%= current_user.name %> | <a href="/sign-out">Sign Out</a></p>
-      <% else %>
-        <p><a href="/sign-in">Sign In</a></p>
-      <% end %>
-
       <%= yield %>
-
-      <h3><a href="/tweets">Tweets</a> | <a href="/users">Users</a></h3>
+      
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

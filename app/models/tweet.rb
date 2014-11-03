@@ -1,16 +1,14 @@
 require_relative "../../config/environment.rb"
 
 class Tweet < ActiveRecord::Base
-  belongs_to :user
-
-  # attr_accessor :user, :status
+  # attr_reader :user, :status
   
-  # @@all = []
+  # ALL = []
 
   # def initialize(user, status)
   #   @user = user
   #   @status = status
-  #   # @@all << self
+  #   ALL << self
   # end
 
   # def user
@@ -22,6 +20,6 @@ class Tweet < ActiveRecord::Base
   # end
 
   # def self.all
-  #   @@all
+  #   ALL
   # end
 end

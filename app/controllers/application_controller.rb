@@ -9,7 +9,7 @@ class ApplicationController < Sinatra::Application
 
   post '/tweets' do
     # Tweet.new(params[:user], params[:status])
-    Tweet.create(:user_name => params[:user], :status => params[:status])
+    Tweet.create(:user => params[:user], :status => params[:status])
     redirect '/tweets'
   end
 end

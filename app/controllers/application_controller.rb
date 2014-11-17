@@ -8,10 +8,6 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
-  configure :development do
-    set :database, "sqlite3:///db/database.db"
-  end
-
   get '/tweets' do
     @tweets = Tweet.all
     erb :tweets
@@ -19,7 +15,8 @@ class ApplicationController < Sinatra::Base
 
   post '/tweets' do
     # Tweet.new(params[:user], params[:status])
-    Tweet.create(:user => params[:user], :status => params[:status])
+    tweet = Tweet.new(:user => params[:user], :status => params[:status])
+    tweet.save
     redirect '/tweets'
   end
 

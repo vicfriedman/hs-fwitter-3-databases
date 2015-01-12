@@ -1,5 +1,3 @@
-require './config/environment'
-
 class Tweet < ActiveRecord::Base
   # attr_reader :user, :status
   

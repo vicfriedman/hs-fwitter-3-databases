@@ -26,3 +26,5 @@ This iteration of Fwitter focuses on setting up a SQL database to store tweets. 
   * Next we need to modify our controller action that handles the post request from the form
   * We need to actually save the new tweets to database by called `tweet.save`
 
+
+<a href='https://learn.co/lessons/hs-fwitter-3-databases' data-visibility='hidden'>View this lesson on Learn.co</a>

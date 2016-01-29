@@ -27,4 +27,4 @@ This iteration of Fwitter focuses on setting up a SQL database to store tweets. 
   * We need to actually save the new tweets to database by called `tweet.save`
 
 
-<a href='https://learn.co/lessons/hs-fwitter-3-databases' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/hs-fwitter-3-databases' title='Fwitter Project - Database'>Fwitter Project - Database</a> on Learn.co and start learning to code for free.</p>
